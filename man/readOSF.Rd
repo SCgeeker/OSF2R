@@ -22,7 +22,16 @@ Arguments sent to the read function.
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
+Depending on the file type by default the following readfunction is chosen:
+\describe{
+\item{xlsx}{\code{\link[xlsx]{read.xlsx}}}
+\item{xls}{\code{\link[gdata]{read.xls}}}
+\item{sav}{\code{\link[foreign]{read.spss}}}
+\item{csv}{\code{\link[utils]{read.csv}}}
+\item{txt}{\code{\link[utils]{read.table}}}
+\item{dta}{\code{\link[foreign]{read.dta}}}
+}
+Look at the help page of each read function to obtain more information about the arguments needed.
 }
 \value{
 The result of the read function; typically a data frame.
