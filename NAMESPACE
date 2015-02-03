@@ -1,0 +1,6 @@
+exportPattern("^[[:alpha:]]+")
+importFrom(RCurl, "getURL")
+importFrom(xlsx, "read.xlsx")
+importFrom(gdata, "read.xls")
+importFrom(foreign, "read.spss")
+importFrom(foreign, "read.dta")
