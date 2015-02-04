@@ -31,9 +31,10 @@ getOSFfile <- function(
   # Estract file name:
   FileName <- gsub("(^.*files/)|(\\/\\?action=download$)","",Link)
   FullPath <- paste0(dir,"/",FileName)
-  
+
   # Download file (So far using sytem instead of RCurl):
-  system(sprintf("curl -J -L %s > %s", Link, FullPath), ignore.stderr = TRUE)
+  httr::GET(Link, httr::write_disk(FullPath, overwrite = TRUE))
+#   system(sprintf("curl -J -L %s > %s", Link, FullPath), ignore.stderr = TRUE)
 
   # Return location of file:
   return(FullPath)

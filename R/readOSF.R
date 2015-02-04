@@ -10,7 +10,7 @@ readOSF <- function(
   # If readfun is missing, detect it:
   if (missing(readfun)){
     
-    fileex <- regmatches(fileLocation,regexpr("(?<=\\.).*?$", fileLocation, perl=TRUE))
+    fileex <- regmatches(fileLocation,regexpr("(?<=\\.).{1,4}$", fileLocation, perl=TRUE))
     readfun <- switch(fileex,
            xlsx = xlsx::read.xlsx, # Excel file
            xls = gdata::read.xls, # Old excel file
@@ -19,7 +19,6 @@ readOSF <- function(
            sav = foreign::read.spss, # Read SPSS
            dta = foreign::read.dta
            )
-   
   }
   
   # Read data and return:
