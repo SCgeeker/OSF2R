@@ -28,6 +28,8 @@ Sacha Epskamp <mail@sachaepskamp.com>
 \code{\link{readOSF}}
 }
 \examples{
+\dontrun{
 # Download the Replication Project Psychology master data (https://osf.io/5wup8/):
 getOSFfile("5wup8")
+}
 }

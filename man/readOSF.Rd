@@ -43,6 +43,9 @@ Sacha Epskamp <mail@sachaepskamp.com>
 \code{\link{getOSFfile}}
 }
 \examples{
+\dontrun{
 # Read the Replication Project Psychology master data (https://osf.io/5wup8/):
-RPPmaster <- readOSF("5wup8", sheetName = "MASTER", startRow = 5, header = TRUE, stringsAsFactors = FALSE) 
+RPPmaster <- readOSF("5wup8", sheetName = "MASTER", startRow = 5, header = TRUE, 
+                      stringsAsFactors = FALSE) 
+        }
 }
